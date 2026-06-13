@@ -1,0 +1,254 @@
+# Grow a Garden 2 — Auto-Farm Setup Guide
+
+This script farms the game for you on autopilot: it **plants & buys seeds, harvests & sells crops, tames & equips pets, redeems codes, keeps you un-AFK**, and can run in a **low-power mode** so it's light on your PC.
+
+You only ever edit the **Config** block at the very top of the script. Everything under the line that says `built-in script (don't edit below)` is the engine — **leave it alone**.
+
+---
+
+## 1. How to run it
+
+1. Open the script in your executor.
+2. Change the settings at the top (the part shown in this guide).
+3. Execute it. It waits for the game to load and then starts on its own.
+4. To **stop** it, run this in your executor:
+   ```lua
+   getgenv().GAG2_Engine.Unload()
+   ```
+
+---
+
+## 2. The 5 rules of editing (read this!)
+
+1. `true` = ON, `false` = OFF. **No quotes** around true/false.
+2. Words/names go **in quotes**: `"Carrot"`.
+3. A **list** looks like `{ "Carrot", "Tomato" }`. An **empty list** `{}` usually means *"everything / use defaults"*.
+4. `["Carrot"]=50` means *"keep 50 Carrots growing"*. The number is an amount.
+5. Don't remove the commas `,` or the curly brackets `{ }` — they hold it together. If you mess it up, the script just uses safe defaults, so nothing breaks badly.
+
+---
+
+## 3. Every setting, in plain English
+
+### Planting
+| Setting | What it does |
+|---|---|
+| **Seeds To Plant** | For each crop: how many to keep planted. `["Carrot"]=50` keeps 50 carrots. Set `0` or delete the line to skip a crop. |
+| **Auto Buy Seeds** | Buys the seeds you listed when you can afford them. |
+| **Auto Plant** | Plants them for you. |
+| **Auto Upgrade Crops** | Spends money on crop upgrades. |
+| **Expand Garden** | Buys garden expansions when affordable. |
+
+### Harvest
+| Setting | What it does |
+|---|---|
+| **Auto Harvest** | Collects crops that are ready. |
+| **Auto Sell** | Sells what you harvest. |
+| **Keep Mutated** | `true` = never sell mutated crops (keep them all). |
+| **Wait For Mutations** | `{}` = sell everything. Or hoard certain mutations, e.g. `{ "Gold", "Rainbow" }` (those won't be sold). |
+| **Keep Favorites** | Crops to **never** sell or dig up, e.g. `{ "Sunflower" }`. |
+
+### Gears
+| Setting | What it does |
+|---|---|
+| **Use Sprinklers** / **Use Watering Can** | Use them to make crops grow faster. |
+| **Buy Gears** | Buy gear when you can afford it. |
+| **Gears To Buy** | `{}` = buy every sprinkler + watering can (recommended). |
+| **Gears To Use** | `{}` = use the best ones you own (recommended). |
+
+### Pets
+| Setting | What it does |
+|---|---|
+| **Enable** | Master switch for everything pet-related. |
+| **Buy Wild Pets** | Tames the wild pets roaming the map (only ones in your buy list). |
+| **Equip Best Pets** | Keeps your best farming pets equipped. |
+| **Open Eggs** | Auto-opens eggs (off by default). |
+| **Pets To Buy** | Which pets to tame — **use the exact names from the pet list below**. |
+| **Pets To Equip** | Which pets to keep equipped, **in priority order** (the first one is equipped first). |
+
+### Codes
+| Setting | What it does |
+|---|---|
+| **Auto Redeem** | Redeems the codes in the list. |
+| **List** | The codes to redeem, e.g. `{ "TEAMGREENBEAN" }`. |
+
+### Webhook (Discord pet alerts)
+Every pet you catch gets posted to a shared Discord channel. **This is built in — you can't change where it posts.** Your only options:
+| Setting | What it does |
+|---|---|
+| **Enabled** | `true`/`false` — get the alerts or not. |
+| **Your Discord ID** | Paste your numeric Discord ID to get **pinged** when *you* catch a pet. Leave `""` for no ping. It will **never** ping @everyone. |
+| **Only These** | Only alert for these rarities, e.g. `{ "Mythic", "Super" }`. `{}` = every pet. |
+
+> **How to find your Discord ID:** Discord → **Settings → Advanced → Developer Mode (ON)**. Then right-click your own name → **Copy User ID**. It's a long number like `123456789012345678`.
+
+### Anti AFK
+| Setting | What it does |
+|---|---|
+| **Enabled** | Stops the game from kicking you for being idle. |
+
+### Performance
+| Setting | What it does |
+|---|---|
+| **Enabled** | Low-power mode: turns off 3D graphics and shows a black stats screen. Saves CPU/GPU/RAM — great for weak PCs or running many accounts. |
+| **FPS Cap** | Limits frames per second. `5` is plenty for farming. Lower = lighter. |
+
+---
+
+## 4. Valid PET names (copy these exactly)
+
+Use the name in the **"Type this"** column (no spaces in some of them!).
+
+| Type this | Pet | Rarity |
+|---|---|---|
+| `Frog` | Frog | Common |
+| `Bunny` | Bunny | Common |
+| `Owl` | Owl | Uncommon |
+| `Deer` | Deer | Rare |
+| `Bee` | Bee | Legendary |
+| `Robin` | Robin | Legendary |
+| `GoldenDragonfly` | Golden Dragonfly | Mythic |
+| `Monkey` | Monkey | Mythic |
+| `Unicorn` | Unicorn | Mythic |
+| `Raccoon` | Raccoon | Super |
+| `BlackDragon` | Black Dragon | Super |
+| `IceSerpent` | Ice Serpent | Super |
+
+> **Frog, Bunny, Owl** spawn the most often. The higher rarities are rarer to find in the wild.
+
+---
+
+## 5. Valid SEED names
+
+```
+Carrot, Strawberry, Blueberry, Tulip, Tomato, Apple, Bamboo, Corn, Cactus,
+Pineapple, Mushroom, Green Bean, Banana, Grape, Coconut, Mango, Dragon Fruit,
+Acorn, Cherry, Sunflower, Venus Fly Trap, Pomegranate, Poison Apple, Moon Bloom,
+Dragon's Breath, Ghost Pepper, Poison Ivy, Baby Cactus, Glow Mushroom, Romanesco,
+Horned Melon
+```
+
+---
+
+## 6. Copy-paste examples
+
+### Example A — Set-and-forget overnight farm
+Plants a big variety, sells everything, catches the good pets, runs light.
+```lua
+getgenv().Config = {
+	["Planting"] = {
+		["Seeds To Plant"] = {
+			["Carrot"]=50, ["Tomato"]=40, ["Strawberry"]=30, ["Blueberry"]=20, ["Corn"]=20,
+		},
+		["Auto Buy Seeds"]=true, ["Auto Plant"]=true, ["Auto Upgrade Crops"]=true, ["Expand Garden"]=true,
+	},
+	["Harvest"] = {
+		["Auto Harvest"]=true, ["Auto Sell"]=true, ["Keep Mutated"]=false,
+		["Wait For Mutations"]={}, ["Keep Favorites"]={},
+	},
+	["Gears"] = { ["Use Sprinklers"]=true, ["Use Watering Can"]=true, ["Buy Gears"]=true, ["Gears To Buy"]={}, ["Gears To Use"]={} },
+	["Pets"] = {
+		["Enable"]=true, ["Buy Wild Pets"]=true, ["Equip Best Pets"]=true, ["Open Eggs"]=false,
+		["Pets To Buy"]={ "GoldenDragonfly","Unicorn","Monkey","Deer","Robin","Raccoon" },
+		["Pets To Equip"]={ "GoldenDragonfly","Unicorn","Monkey","Deer","Robin","Raccoon" },
+	},
+	["Codes"] = { ["Auto Redeem"]=true, ["List"]={ "TEAMGREENBEAN" } },
+	["Webhook"] = { ["Enabled"]=true, ["Your Discord ID"]="", ["Only These"]={} },
+	["Anti AFK"] = { ["Enabled"]=true },
+	["Performance"] = { ["Enabled"]=true, ["FPS Cap"]=5 },
+}
+```
+
+### Example B — Pet hunter (catch everything, ping me on rares only)
+```lua
+getgenv().Config = {
+	["Planting"] = {
+		["Seeds To Plant"] = { ["Carrot"]=30 },
+		["Auto Buy Seeds"]=true, ["Auto Plant"]=true, ["Auto Upgrade Crops"]=false, ["Expand Garden"]=true,
+	},
+	["Harvest"] = { ["Auto Harvest"]=true, ["Auto Sell"]=true, ["Keep Mutated"]=false, ["Wait For Mutations"]={}, ["Keep Favorites"]={} },
+	["Gears"] = { ["Use Sprinklers"]=true, ["Use Watering Can"]=true, ["Buy Gears"]=true, ["Gears To Buy"]={}, ["Gears To Use"]={} },
+	["Pets"] = {
+		["Enable"]=true, ["Buy Wild Pets"]=true, ["Equip Best Pets"]=true, ["Open Eggs"]=false,
+		["Pets To Buy"]={ "Frog","Bunny","Owl","Deer","Bee","Robin","GoldenDragonfly","Monkey","Unicorn","Raccoon" },
+		["Pets To Equip"]={ "GoldenDragonfly","Unicorn","Monkey","Robin","Deer" },
+	},
+	["Codes"] = { ["Auto Redeem"]=true, ["List"]={ "TEAMGREENBEAN" } },
+	["Webhook"] = { ["Enabled"]=true, ["Your Discord ID"]="PUT_YOUR_ID_HERE", ["Only These"]={ "Mythic","Super" } },
+	["Anti AFK"] = { ["Enabled"]=true },
+	["Performance"] = { ["Enabled"]=true, ["FPS Cap"]=10 },
+}
+```
+
+### Example C — Super-light (many accounts on one PC)
+```lua
+getgenv().Config = {
+	["Planting"] = { ["Seeds To Plant"] = { ["Carrot"]=20 }, ["Auto Buy Seeds"]=true, ["Auto Plant"]=true, ["Auto Upgrade Crops"]=false, ["Expand Garden"]=false },
+	["Harvest"] = { ["Auto Harvest"]=true, ["Auto Sell"]=true, ["Keep Mutated"]=false, ["Wait For Mutations"]={}, ["Keep Favorites"]={} },
+	["Gears"] = { ["Use Sprinklers"]=true, ["Use Watering Can"]=true, ["Buy Gears"]=false, ["Gears To Buy"]={}, ["Gears To Use"]={} },
+	["Pets"] = { ["Enable"]=false, ["Buy Wild Pets"]=false, ["Equip Best Pets"]=false, ["Open Eggs"]=false, ["Pets To Buy"]={}, ["Pets To Equip"]={} },
+	["Codes"] = { ["Auto Redeem"]=true, ["List"]={ "TEAMGREENBEAN" } },
+	["Webhook"] = { ["Enabled"]=false, ["Your Discord ID"]="", ["Only These"]={} },
+	["Anti AFK"] = { ["Enabled"]=true },
+	["Performance"] = { ["Enabled"]=true, ["FPS Cap"]=3 },
+}
+```
+
+---
+
+## 7. Let ChatGPT build your config for you
+
+Don't want to edit anything by hand? **Copy the entire box below into ChatGPT**, then add one sentence describing what you want (e.g. *"farm carrots + tomatoes, catch only Mythic and Super pets, ping me with ID 12345, run light"*). ChatGPT will hand you a finished config to paste at the top of the script.
+
+```text
+You are configuring a Roblox "Grow a Garden 2" auto-farm script. Output ONLY a Lua
+block starting with `getgenv().Config = {` and nothing else — no explanation.
+
+Follow this EXACT structure and these rules:
+- true = on, false = off (no quotes). Text in quotes. Lists look like { "A", "B" }. Empty list {} means "all / default".
+- "Seeds To Plant" maps a crop name to how many to keep growing, e.g. ["Carrot"]=50.
+- Pet names MUST be from this exact list (mind the spelling, no spaces in some):
+  Frog, Bunny, Owl, Deer, Bee, Robin, GoldenDragonfly, Monkey, Unicorn, Raccoon, BlackDragon, IceSerpent
+- Seed names must be from: Carrot, Strawberry, Blueberry, Tulip, Tomato, Apple, Bamboo, Corn,
+  Cactus, Pineapple, Mushroom, Green Bean, Banana, Grape, Coconut, Mango, Dragon Fruit, Acorn,
+  Cherry, Sunflower, Venus Fly Trap, Pomegranate, Poison Apple, Moon Bloom, Dragon's Breath,
+  Ghost Pepper, Poison Ivy, Baby Cactus, Glow Mushroom, Romanesco, Horned Melon.
+- Rarities for "Only These": Common, Uncommon, Rare, Legendary, Mythic, Super.
+- Mutations for "Wait For Mutations": e.g. Gold, Rainbow.
+- "Your Discord ID" is a number in quotes, or "" for none. "Pets To Equip" is in priority order.
+- FPS Cap: 3-10 is good for farming (lower = lighter).
+
+Template (fill in based on what the user asks for):
+getgenv().Config = {
+	["Planting"] = {
+		["Seeds To Plant"] = { ["Carrot"]=50 },
+		["Auto Buy Seeds"]=true, ["Auto Plant"]=true, ["Auto Upgrade Crops"]=true, ["Expand Garden"]=true,
+	},
+	["Harvest"] = {
+		["Auto Harvest"]=true, ["Auto Sell"]=true, ["Keep Mutated"]=false,
+		["Wait For Mutations"]={}, ["Keep Favorites"]={},
+	},
+	["Gears"] = { ["Use Sprinklers"]=true, ["Use Watering Can"]=true, ["Buy Gears"]=true, ["Gears To Buy"]={}, ["Gears To Use"]={} },
+	["Pets"] = {
+		["Enable"]=true, ["Buy Wild Pets"]=true, ["Equip Best Pets"]=true, ["Open Eggs"]=false,
+		["Pets To Buy"]={ "GoldenDragonfly","Unicorn","Monkey","Deer","Robin","Raccoon" },
+		["Pets To Equip"]={ "GoldenDragonfly","Unicorn","Monkey","Deer","Robin","Raccoon" },
+	},
+	["Codes"] = { ["Auto Redeem"]=true, ["List"]={ "TEAMGREENBEAN" } },
+	["Webhook"] = { ["Enabled"]=true, ["Your Discord ID"]="", ["Only These"]={} },
+	["Anti AFK"] = { ["Enabled"]=true },
+	["Performance"] = { ["Enabled"]=true, ["FPS Cap"]=5 },
+}
+
+My request: <DESCRIBE WHAT YOU WANT HERE>
+```
+
+---
+
+## 8. Quick troubleshooting
+
+- **It's not doing anything** → make sure you executed it *in-game* and the game finished loading. Re-execute.
+- **A pet isn't being caught** → check the spelling matches the pet list exactly (e.g. `GoldenDragonfly`, not `Golden Dragonfly`).
+- **A crop isn't planting** → check the seed name spelling, and that the number is above `0`.
+- **I want to stop it** → `getgenv().GAG2_Engine.Unload()`
+- **Lag / running lots of accounts** → set `["Performance"] = { ["Enabled"]=true, ["FPS Cap"]=3 }`.
